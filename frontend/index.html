@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Restaurante Los Inges</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600&amp;family=Noto+Serif:wght@600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-container": "#f59e0b",
+                        "error": "#ffb4ab",
+                        "on-primary-container": "#613b00",
+                        "surface-container-lowest": "#0c0f0f",
+                        "inverse-primary": "#855300",
+                        "inverse-surface": "#e2e2e2",
+                        "outline-variant": "#534434",
+                        "on-secondary": "#293040",
+                        "outline": "#a08e7a",
+                        "tertiary-container": "#a8b2c4",
+                        "surface-dim": "#121414",
+                        "secondary-fixed-dim": "#c0c6db",
+                        "on-secondary-fixed-variant": "#404758",
+                        "secondary-fixed": "#dce2f7",
+                        "tertiary": "#c3cde0",
+                        "secondary-container": "#404758",
+                        "surface": "#121414",
+                        "on-primary": "#472a00",
+                        "surface-variant": "#333535",
+                        "on-tertiary-fixed-variant": "#3d4756",
+                        "on-error-container": "#ffdad6",
+                        "error-container": "#93000a",
+                        "on-tertiary-container": "#3a4554",
+                        "on-tertiary": "#27313f",
+                        "on-primary-fixed-variant": "#653e00",
+                        "on-surface": "#e2e2e2",
+                        "tertiary-fixed": "#d9e3f6",
+                        "secondary": "#c0c6db",
+                        "surface-tint": "#ffb95f",
+                        "surface-container-low": "#1a1c1c",
+                        "background": "#121414",
+                        "on-error": "#690005",
+                        "surface-container": "#1e2020",
+                        "on-primary-fixed": "#2a1700",
+                        "surface-container-highest": "#333535",
+                        "on-secondary-fixed": "#141b2b",
+                        "primary-fixed-dim": "#ffb95f",
+                        "on-secondary-container": "#aeb5c9",
+                        "inverse-on-surface": "#2f3131",
+                        "on-tertiary-fixed": "#121c2a",
+                        "tertiary-fixed-dim": "#bdc7d9",
+                        "primary": "#ffc174",
+                        "primary-fixed": "#ffddb8",
+                        "surface-container-high": "#282a2b",
+                        "on-background": "#e2e2e2",
+                        "surface-bright": "#37393a",
+                        "on-surface-variant": "#d8c3ad"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "64px",
+                        "max-width": "1280px"
+                    },
+                    "fontFamily": {
+                        "headline-sm": ["Noto Serif"],
+                        "label-md": ["Be Vietnam Pro"],
+                        "display-lg": ["Noto Serif"],
+                        "body-md": ["Be Vietnam Pro"],
+                        "headline-md": ["Noto Serif"],
+                        "body-lg": ["Be Vietnam Pro"]
+                    },
+                    "fontSize": {
+                        "headline-sm": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #111827;
+        }
+    </style>
+</head>
+
+<body class="bg-[#111827] text-on-background font-body-md text-body-md antialiased pt-20">
+    <!-- TopNavBar -->
+    <header
+        class="fixed top-0 w-full z-50 border-b border-white/10 bg-[#111827]/90 backdrop-blur-xl shadow-[0_4px_20px_rgba(245,158,11,0.15)]">
+        <div class="max-w-[1280px] mx-auto flex justify-between items-center px-8 h-20">
+            <div class="text-2xl font-serif font-bold text-amber-500 italic">Los Inges</div>
+            <nav class="hidden md:flex gap-8">
+                <a class="font-serif text-sm tracking-wide text-amber-500 border-b-2 border-amber-500 pb-1"
+                    href="#">Menú</a>
+                <a class="font-serif text-sm tracking-wide text-gray-300 hover:text-amber-400 hover:bg-white/5 transition-all duration-300 active:scale-95 transition-transform px-2 py-1 rounded"
+                    href="#">Pedidos</a>
+                <a class="font-serif text-sm tracking-wide text-gray-300 hover:text-amber-400 hover:bg-white/5 transition-all duration-300 active:scale-95 transition-transform px-2 py-1 rounded"
+                    href="#">Nosotros</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <button
+                    class="hidden md:flex items-center gap-2 bg-amber-500 text-[#111827] px-6 py-2 rounded font-label-md text-label-md hover:bg-amber-400 transition-colors">
+                    Reservar
+                </button>
+                <button
+                    class="text-gray-300 hover:text-amber-400 hover:bg-white/5 transition-all duration-300 active:scale-95 transition-transform p-2 rounded-full">
+                    <span class="material-symbols-outlined"
+                        style="font-variation-settings: 'FILL' 0;">shopping_cart</span>
+                </button>
+                <button
+                    class="text-gray-300 hover:text-amber-400 hover:bg-white/5 transition-all duration-300 active:scale-95 transition-transform p-2 rounded-full">
+                    <span class="material-symbols-outlined"
+                        style="font-variation-settings: 'FILL' 0;">account_circle</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <main class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop py-12 flex flex-col gap-16">
+        <!-- Hero Section -->
+        <section
+            class="relative rounded-xl overflow-hidden min-h-[500px] flex items-center justify-center text-center px-6 py-16 border border-white/10 shadow-[0_4px_20px_rgba(245,158,11,0.1)] bg-[#1F2937]">
+            <img alt="Restaurant interior"
+                class="absolute inset-0 w-full h-full object-cover opacity-30 mix-blend-overlay"
+                data-alt="dimly lit upscale restaurant interior with dark wooden tables amber lighting glowing candles and sophisticated ambiance"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNErhaON45i5Alt-Z3pYbBe-Kt0uyHcFbSbRk7vnsy4jpTSelYw5SGl4uDelTlz_5RBmeeJWpEBN_2sOJcjHSGQsdDhJ56z6MyzL_X8SrbkoTFxX1ss3_k89sUQIWJsLhBlUQv-Fz_HXEcq8BT4keLK6k16Z6dq8IISEvYd2goYmRNYkuOsGj317kxIkCvBFVNDOHeMEG0toJxcRdAxFGiPfw27DcJaGo2qS2peuLVo35V-4AmIoXzo7laZJA3vxptIRs0usf8rA" />
+            <div class="relative z-10 max-w-3xl mx-auto flex flex-col items-center gap-6">
+                <h1 class="font-display-lg text-display-lg text-amber-500">Bienvenidos a Los Inges</h1>
+                <p class="font-body-lg text-body-lg text-gray-300 max-w-xl">Una experiencia culinaria excepcional en un
+                    ambiente íntimo y sofisticado.</p>
+                <button
+                    class="mt-4 bg-amber-500 text-[#111827] px-8 py-3 rounded-lg font-label-md text-label-md hover:bg-amber-400 transition-colors shadow-[0_4px_15px_rgba(245,158,11,0.4)]">
+                    Ver Menú
+                </button>
+            </div>
+        </section>
+        <!-- Menu Section -->
+        <section class="flex flex-col gap-8">
+            <div class="flex items-center justify-between border-b border-white/10 pb-4">
+                <h2 class="font-headline-md text-headline-md text-amber-500">Nuestro Menú</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1 -->
+                <article
+                    class="bg-[#1F2937] border border-white/10 rounded-xl overflow-hidden flex flex-col group hover:shadow-[0_4px_20px_rgba(245,158,11,0.15)] transition-all duration-300">
+                    <div class="relative h-48 overflow-hidden">
+                        <img alt="Pizza Margarita"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            data-alt="classic margherita pizza with fresh basil and melted mozzarella on dark rustic wooden board warm dramatic lighting"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUARvpTLUy6eZCnMm46R4QjnT0vwZ6uw5oKh3arOstMJQD98jjKatGZTXlR1S17EDQVBAQD9-Pz9vcdlrqOGeJ-o18RmyPR8JoRkrbTbSARSM7VDusy0yxyin9qutnDwN2mhPLCGcpCuupnKDSkTz_B5zhChZS4IbQ1zpqmPyTX79ndGeQWaD68mMTHin26LUlXQd4KE_kUe5yepqYUob8zf2PiSBQpTNnPI_zXCPJm9JVuITqfrpa96fOGoK8mEH43sNUgJvv5g" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#1F2937] to-transparent opacity-80"></div>
+                        <span
+                            class="absolute top-4 right-4 bg-[#111827]/80 backdrop-blur text-amber-500 px-3 py-1 rounded-full font-label-md text-label-md border border-amber-500/30">
+                            $120
+                        </span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow gap-4">
+                        <div>
+                            <h3 class="font-headline-sm text-headline-sm text-gray-100 mb-2">Pizza Margarita</h3>
+                            <p class="font-body-md text-body-md text-gray-400">Clásica con albahaca y mozzarella fresca
+                            </p>
+                        </div>
+                        <div class="mt-auto pt-4 border-t border-white/5">
+                            <button
+                                class="w-full border border-amber-500 text-amber-500 hover:bg-amber-500 hover:text-[#111827] py-2 rounded-lg font-label-md text-label-md transition-colors flex items-center justify-center gap-2">
+                                <span class="material-symbols-outlined text-sm">add</span>
+                                Agregar
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                <!-- Card 2 -->
+                <article
+                    class="bg-[#1F2937] border border-white/10 rounded-xl overflow-hidden flex flex-col group hover:shadow-[0_4px_20px_rgba(245,158,11,0.15)] transition-all duration-300">
+                    <div class="relative h-48 overflow-hidden">
+                        <img alt="Alitas BBQ"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            data-alt="sticky glazed bbq chicken wings on dark slate plate with fresh herbs moody lighting high contrast"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgYVAVS4EnBc7B6mqnWLffuT6SF_rjdgwSbtNGP8Ft0BeOWovPkri9SXqPkJWewYY3P_7iBYvej29KArp5xL56sWw7gBP75AxgMJNZQlxF-IwqtvvDhRSkR2LK7o988Z9yyqbI3sU1YVI0UtuZFpUXp37Jmbdzzm1AVhrJxRiQuhEX63UN5uIRv8b2xYdf4W0pnou1_hmzQmpnSwDlzqt7bvHKTnfoxmV29MOodBQgtrZECkzTgz2ZHsrF2SdAwKxj-vTDS3QpQw" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#1F2937] to-transparent opacity-80"></div>
+                        <span
+                            class="absolute top-4 right-4 bg-[#111827]/80 backdrop-blur text-amber-500 px-3 py-1 rounded-full font-label-md text-label-md border border-amber-500/30">
+                            $85
+                        </span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow gap-4">
+                        <div>
+                            <h3 class="font-headline-sm text-headline-sm text-gray-100 mb-2">Alitas BBQ</h3>
+                            <p class="font-body-md text-body-md text-gray-400">Alitas bañadas en salsa BBQ artesanal</p>
+                        </div>
+                        <div class="mt-auto pt-4 border-t border-white/5">
+                            <button
+                                class="w-full border border-amber-500 text-amber-500 hover:bg-amber-500 hover:text-[#111827] py-2 rounded-lg font-label-md text-label-md transition-colors flex items-center justify-center gap-2">
+                                <span class="material-symbols-outlined text-sm">add</span>
+                                Agregar
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                <!-- Card 3 -->
+                <article
+                    class="bg-[#1F2937] border border-white/10 rounded-xl overflow-hidden flex flex-col group hover:shadow-[0_4px_20px_rgba(245,158,11,0.15)] transition-all duration-300">
+                    <div class="relative h-48 overflow-hidden">
+                        <img alt="Refresco"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            data-alt="tall glass of ice cold cola drink with condensation bubbles and lime wedge dark background cinematic lighting"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQHfP-5cFX-51t9fTn-mByREYWnkFldlKOFsKLGE9kvhN7Jg8ooZ3CsWI06kEpVo9LWVox_lUYGISvHErSfbxtX7ixZuVAbl-Kx84jicbW3oYFYZcZfGLkESVnm-u3Yh-TzkY_UN8-1kuMgOoWQfvTU6fH__SxskRytxm1Ca6Jklh8kOiq4NNhWeOSFQq9bVSKwJJwrZ7tUOj_f44isOQxkssCmQJtEPMFX5zp_N2pHqzW4b4_ulA_zS7b-lEaRw_eByFqKXPlrw" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#1F2937] to-transparent opacity-80"></div>
+                        <span
+                            class="absolute top-4 right-4 bg-[#111827]/80 backdrop-blur text-amber-500 px-3 py-1 rounded-full font-label-md text-label-md border border-amber-500/30">
+                            $25
+                        </span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow gap-4">
+                        <div>
+                            <h3 class="font-headline-sm text-headline-sm text-gray-100 mb-2">Refresco</h3>
+                            <p class="font-body-md text-body-md text-gray-400">Refresco de cola helado</p>
+                        </div>
+                        <div class="mt-auto pt-4 border-t border-white/5">
+                            <button
+                                class="w-full border border-amber-500 text-amber-500 hover:bg-amber-500 hover:text-[#111827] py-2 rounded-lg font-label-md text-label-md transition-colors flex items-center justify-center gap-2">
+                                <span class="material-symbols-outlined text-sm">add</span>
+                                Agregar
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                <!-- Card 4 -->
+                <article
+                    class="bg-[#1F2937] border border-white/10 rounded-xl overflow-hidden flex flex-col group hover:shadow-[0_4px_20px_rgba(245,158,11,0.15)] transition-all duration-300">
+                    <div class="relative h-48 overflow-hidden">
+                        <img alt="Pastel de chocolate"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            data-alt="decadent slice of dark chocolate cake with fresh red strawberries on dark ceramic plate elegant moody lighting"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNQwrrUVcSH0zb5c9ta9C8AkV6Uek6xjbksk6UgIPoQnzvc-Yu4Ch5pTWGw9vRUhVCI0m0ooI5sJ8jLs9rMsvWePlTDAWUOxnguekTanppkxrWiZqLnhc_gCdMO3-0cYCvPdM8YISmyAjrRbyTHvLskKrfGam0pgq1SYcjk5jr4jEZqzgfk-yKYDMBXTxe4UA2G0BcR1UySnEKzQgt72o_kSzm0LrALrR3YRYoUuPgM_kWTPHpYLcSkoh5j8ioIjKh-OL-0QEf8w" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#1F2937] to-transparent opacity-80"></div>
+                        <span
+                            class="absolute top-4 right-4 bg-[#111827]/80 backdrop-blur text-amber-500 px-3 py-1 rounded-full font-label-md text-label-md border border-amber-500/30">
+                            $55
+                        </span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow gap-4">
+                        <div>
+                            <h3 class="font-headline-sm text-headline-sm text-gray-100 mb-2">Pastel de chocolate</h3>
+                            <p class="font-body-md text-body-md text-gray-400">Postre de chocolate oscuro con fresas</p>
+                        </div>
+                        <div class="mt-auto pt-4 border-t border-white/5">
+                            <button
+                                class="w-full border border-amber-500 text-amber-500 hover:bg-amber-500 hover:text-[#111827] py-2 rounded-lg font-label-md text-label-md transition-colors flex items-center justify-center gap-2">
+                                <span class="material-symbols-outlined text-sm">add</span>
+                                Agregar
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="w-full border-t border-white/10 mt-16 bg-[#111827] flat">
+        <div class="max-w-[1280px] mx-auto py-12 px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-xl font-serif font-bold text-amber-500">
+                Los Inges
+            </div>
+            <nav class="flex gap-6">
+                <a class="font-serif text-xs uppercase tracking-widest text-gray-500 hover:text-amber-400 transition-colors"
+                    href="#">Privacidad</a>
+                <a class="font-serif text-xs uppercase tracking-widest text-gray-500 hover:text-amber-400 transition-colors"
+                    href="#">Términos</a>
+                <a class="font-serif text-xs uppercase tracking-widest text-gray-500 hover:text-amber-400 transition-colors"
+                    href="#">Contacto</a>
+            </nav>
+            <div class="font-serif text-xs uppercase tracking-widest text-gray-500">
+                © 2024 Restaurante Los Inges. Excelencia culinaria.
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
